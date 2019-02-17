@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DropdownComponent implements OnInit {
 
   constructor() { }
-
+  public dropdown = {};  
   ngOnInit() {
   }
 
