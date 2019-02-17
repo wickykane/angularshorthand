@@ -14,9 +14,6 @@ storiesOf('Angular Shorthand', module)
       providers: [],
     })
   )
-.add('App Component', () => ({
-    component: AppComponent
-}))
 .add('Dropdown Component', () => ({
     component: DropdownComponent,
 }));
