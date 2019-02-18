@@ -6,12 +6,12 @@
                     <button class="btn btn-outline-primary">
                             {{ dropdown['value'] || "Button"}}
                             <span>
-                                    <i class="fas fa-caret-down"></i>
+                                <i class="fas fa-caret-down"></i>
                             </span>
                     </button>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 </section>
 
@@ -30,6 +30,7 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade show active" id="html">
+                <button data-toggle="tooltip" data-placement="top" title="Copy" class="float-right btn-copy" copyDirective copy-data="{{ componentData['html'] }}">Copy</button>
                 <pre>
                     <code data-language="html">
                         {{ componentData["html"] }}
@@ -59,18 +60,22 @@
             </div>
             <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="profile-tab">
                 <pre>
-                            <code data-language="html">
-                                {{ componentData["css"] }}
-                            </code>
-                        </pre>
+                    <code data-language="html">
+                        {{ componentData["css"] }}
+                    </code>
+                </pre>
             </div>
             <div class="tab-pane fade" id="ts" role="tabpanel" aria-labelledby="contact-tab">
                 <pre>
-                            <code data-language="html">
-                                {{ componentData["ts"] }}
-                            </code>
-                        </pre>
+                    <code data-language="html">
+                        {{ componentData["ts"] }}
+                    </code>
+                </pre>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    alert(1);
+</script>

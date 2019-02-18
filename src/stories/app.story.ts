@@ -6,15 +6,14 @@ import { action } from '@storybook/addons';
 import { CopyDirective } from 'src/app/shared/directive/copy.directive';
 
 storiesOf('Angular Shorthand', module)
-.addDecorator(
+  .addDecorator(
     moduleMetadata({
       imports: [SharedModule],
       schemas: [],
       declarations: [],
-      providers: [],
+      providers: []
     })
   )
-.add('Dropdown Component', () => ({
-    component: DropdownComponent,
-}));
-
+  .add('Dropdown Component', () => ({
+    component: DropdownComponent
+  }));
