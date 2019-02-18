@@ -1,3 +1,4 @@
+import { TableComponent } from './../app/components/table/table.component';
 import { SharedModule } from './../app/shared/shared.module';
 import { DropdownComponent } from './../app/components/dropdown/dropdown.component';
 import { AppComponent } from './../app/app.component';
@@ -16,4 +17,7 @@ storiesOf('Angular Shorthand', module)
   )
   .add('Dropdown Component', () => ({
     component: DropdownComponent
+  }))
+  .add('Table Component', () => ({
+    component: TableComponent
   }));
