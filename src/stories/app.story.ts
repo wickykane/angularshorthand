@@ -1,17 +1,22 @@
+import { NumberFormatDirective } from './../app/components/number-mask/number-mask.directive';
+import { NumberMaskComponent } from './../app/components/number-mask/number-mask.component';
+import { CarouselItemDirective } from './../app/components/carousel/carouselItem.directive';
+import { CarouselContainerComponent } from './../app/components/carousel/carousel.container.component';
+import { CarouselComponent } from './../app/components/carousel/carousel.component';
 import { TableComponent } from './../app/components/table/table.component';
 import { SharedModule } from './../app/shared/shared.module';
 import { DropdownComponent } from './../app/components/dropdown/dropdown.component';
-import { AppComponent } from './../app/app.component';
 import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { action } from '@storybook/addons';
-import { CopyDirective } from 'src/app/shared/directive/copy.directive';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 storiesOf('Angular Shorthand', module)
   .addDecorator(
     moduleMetadata({
-      imports: [SharedModule],
+      imports: [SharedModule, BrowserAnimationsModule ],
       schemas: [],
-      declarations: [],
+      declarations: [CarouselComponent, CarouselItemDirective, NumberFormatDirective],
       providers: []
     })
   )
@@ -20,4 +25,10 @@ storiesOf('Angular Shorthand', module)
   }))
   .add('Table Component', () => ({
     component: TableComponent
+  }))
+  .add('Carousel Component', () => ({
+    component: CarouselContainerComponent
+  }))
+  .add('Input Number Mask', () => ({
+    component: NumberMaskComponent
   }));

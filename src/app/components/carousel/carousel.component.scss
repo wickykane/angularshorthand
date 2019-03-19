@@ -1,0 +1,42 @@
+:host ::ng-deep {
+    [carouselItem] {
+        background-color: aqua;
+    }
+    .carousel-container {
+        position: relative;
+        .carousel-inner {
+            padding: 1rem 2.5rem;
+            overflow: hidden;
+            img {
+                max-width: 100%;
+            }
+            >ul {
+                display: flex;
+                overflow: hidden;
+                padding: 0;
+                >li {
+                    list-style: none;
+                }
+            }
+        }
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            display: flex;
+            width: 100%;
+            padding: 0 .5rem;
+            transform: translateY(-50%);
+            justify-content: space-between;
+            svg {
+                cursor: pointer;
+                fill: rgb(165, 162, 162);
+                width: 24px;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    fill: rgb(228, 220, 220);
+                }
+            }
+        }
+    }
+}
