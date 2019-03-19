@@ -16,7 +16,7 @@ export class CopyDirective implements OnInit {
   @HostListener("click", ["$event"])
   onElementClick(event) {
     this.copyToClipboard(this._data);
-    jQuery(".btn-copy")
+    jQuery(this.element.nativeElement)
       .attr("title", "Copied!")
       .tooltip("_fixTitle")
       .tooltip("show")
@@ -46,7 +46,7 @@ export class CopyDirective implements OnInit {
   };
 
   ngOnInit() {
-    jQuery(".btn-copy")
+    jQuery(this.element.nativeElement)
       .attr("title", "Copy to clipboard")
       .tooltip("_fixTitle");
   }
