@@ -21,7 +21,7 @@ export class FixHeaderTableDirective implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const table = jQuery(this.element.nativeElement);
     //Init Scrollbar
-    table.find(".scrollbar-inner").scrollbar();
+    // table.find(".scrollbar-inner").scrollbar();
 
     const th = table.find("thead th");
     const td = table.find("tbody tr:first-child td");

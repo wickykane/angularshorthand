@@ -1,0 +1,12 @@
+<section class="mt-3">
+  <p>Note: Remember add polyfill before use this directive</p>
+  <div class="container">
+    <div class="row">
+        <div  class="col-md-4 mb-3" style='overflow: hidden; height: 200px;' *ngFor="let img of _imgList; let i = index; let odd = odd; let even = even;">
+            <img *ngIf="odd" lazyLoad  [srcImage]="'http://www.effigis.com/wp-content/uploads/2015/02/Banniere-Images-Satellite-FR.jpg'"/>
+            <img *ngIf="even" lazyLoad  [srcImage]="'https://s.abcnews.com/images/Business/yahoo-gty-er-181130_hpMain_16x9_992.jpg'"  alt="">
+          </div>
+    </div>
+  
+  </div>
+</section>

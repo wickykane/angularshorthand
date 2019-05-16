@@ -1,3 +1,4 @@
+import { FixedTableComponent } from './directive/test.directive';
 import { CopyDirective } from './directive/copy.directive';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

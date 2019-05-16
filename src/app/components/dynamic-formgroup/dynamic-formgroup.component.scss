@@ -1,0 +1,9 @@
+input {
+    outline: none;
+    &.ng-dirty.ng-touched.ng-invalid {
+        border: 1px solid red;
+        &:focus {
+            outline: none;
+        }
+    }
+}

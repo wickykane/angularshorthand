@@ -88,7 +88,22 @@ export class TableComponent implements OnInit, AfterViewInit {
     `;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+      this.componentData.list = [
+          {id: 1, name: 232},
+      ]
+  }
+
+  add() {
+          this.componentData.list.push({
+              id: 1, 
+              name: this.componentData.list.length * 999
+          })
+  }
+
+   test() {
+       alert(1);
+   }
 
   ngAfterViewInit(): void {
     Rainbow.color();

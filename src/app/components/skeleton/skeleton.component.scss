@@ -1,0 +1,48 @@
+.skeleton {
+    display: table;
+    padding: 1rem;
+    width: 100%;
+    >div {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .avatar {
+        width: 40px;
+        .avatar-skeleton {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #f2f2f2;
+            background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+            background-size: 400% 100%;
+            border-radius: 50%;
+            animation: loading 1.4s ease infinite;
+        }
+    }
+    .content-row {
+        ul {
+            list-style: none;
+            li {
+                height: 15px;
+                width: 100%;
+                background-color: #f2f2f2;
+                background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+                background-size: 400% 100%;
+                animation: loading 1.4s ease infinite;
+                &+li {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

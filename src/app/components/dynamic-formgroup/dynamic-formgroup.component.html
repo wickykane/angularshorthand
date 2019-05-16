@@ -1,0 +1,46 @@
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody [formGroup]="formData">
+                    <ng-container formArrayName="items" *ngFor="let item of items?.controls; let i=index">
+                        <tr [formGroupName]="i">
+                            <td>{{i + 1}}</td>
+                            <td>
+                                <input type="text" formControlName="name">
+                            </td>
+                            <td>
+                                <select formControlName="type">
+                                <option value="0">Date</option>
+                                <option value="1">Month</option>
+                              </select>
+                            </td>
+                            <td>
+                                <input type="text" formControlName="email">
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+            <div>
+                <button class="btn btn-success" (click)="addItem()"> + Add New Item </button>
+                <div class="mt-3">
+                    Valid: {{ items?.valid }}
+                    <br> Value: {{ (items?.value || undefined ) | json }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
